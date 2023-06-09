@@ -24,9 +24,9 @@ arr	answer
 <script>
 function solution(arr){
     var answer = [];
-    for(let i = 0;  i< arr.length; i++){
-        if(arr[i] !== arr[i+1]){
-            answer.push(arr[i])
+    for(let i = 0; i < arr.length; i++){    //1
+        if(arr[i] !== arr[i+1]){    //2
+            answer.push(arr[i])     //3
         }
     }
     return answer;
@@ -34,10 +34,28 @@ function solution(arr){
 </script>
 <!-- 내가 쓴 정답 -->
 
+
+
 <!-- 남이 쓴 정답 -->
 <script>
 function solution(arr){
-    return arr.filter((val,index) => val != arr[index+1]);
+    return arr.filter((val,index) => val != arr[index+1]); // 1
 }
 </script>
 <!-- //남이 쓴 정답 -->
+
+
+
+<!-- 회고록 & 풀이방법
+
+
+  [내가 쓴 정답]
+    1) 배열 arr의 개수만큼 반복하는 반복문을 만들어 준다.
+    2) 그 반복문 안에서 arr의 i번째 원소와 i+1 원소를 비교해주는 조건문을 만들어
+    3) 같지 않다면 answer 빈 배열에 배열 arr i번째 원소를 추가해(push)해줘 return 해준다.
+
+  [남이 쓴 정답]
+    1) 배열 arr을 filter매소드로 비교할 원소와 그 다음 원소를 비교하여 같지 않다면 남기고 같다면 걸러준다.
+
+
+-->
